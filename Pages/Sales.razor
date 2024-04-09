@@ -1,0 +1,14 @@
+@page "/Sales"
+@using BlazingPizza.State
+@inject PizzaSalesState SalesState
+<h3>Sales</h3>
+<h1>Welcome to Blazing Pizza Sales</h1>
+<p>Today we have sold @SalesState.PizzasSoldToday</p>
+<button class="btn btn-primary" @onclick="IncrementSales">Increment Sales</button>
+
+@code {
+    private void IncrementSales()
+    {
+        SalesState.PizzasSoldToday++;
+    }
+}

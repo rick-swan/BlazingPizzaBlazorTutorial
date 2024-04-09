@@ -1,0 +1,30 @@
+@* @page "/" *@
+@* @inject HttpClient HttpClient *@
+@* @inject NavigationManager NavigationManager *@
+@* @using BlazingPizza.Components *@
+@* <div class="main"> *@
+@*     <h1>Blazing Pizzas</h1> *@
+@*     <ul class="pizza-cards"> *@
+@*         @if (_specials != null) *@
+@*         { *@
+@*             @foreach (var special in _specials) *@
+@*             { *@
+@*                 <CascadingValue Name="DealName" Value="HappyPizzaHour"> *@
+@*                     <Pizza Special="@special"></Pizza> *@
+@*                 </CascadingValue> *@
+@*             } *@
+@*         } *@
+@*     </ul> *@
+@* </div> *@
+@* *@
+@* @code { *@
+@*     List<PizzaSpecial> _specials = new(); *@
+@* *@
+@*     protected override async Task OnInitializedAsync() *@
+@*     { *@
+@*         _specials = await HttpClient.GetFromJsonAsync<List<PizzaSpecial>>(NavigationManager.BaseUri + "specials"); *@
+@*     } *@
+@* *@
+@*     public string HappyPizzaHour { get; set; } = "HappyPizzaHour"; *@
+@* *@
+@* } *@

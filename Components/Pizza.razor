@@ -1,0 +1,13 @@
+<li style="background-image: url('@Special.ImageUrl')">
+    <div class="pizza-info">
+        <span class="title">@Special.Name</span>
+        @Special.Description
+        <span class="price">@Special.GetFormattedBasePrice()</span>
+        <DeadTag></DeadTag>
+    </div>
+</li>
+
+@code {
+    [Parameter] public PizzaSpecial Special { get; set; }
+
+}

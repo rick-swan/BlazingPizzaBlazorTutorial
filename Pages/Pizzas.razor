@@ -1,0 +1,27 @@
+@page "/pizzas"
+@using BlazingPizza.Data
+@inject IPizzaService pizzaService
+@using BlazingPizza.Components
+<h3>Pizzas</h3>
+@if (TodaysPizzas == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var pizza in TodaysPizzas)
+        {
+            <li>@pizza.Name</li>
+        }
+    </ul>
+}
+
+@code {
+
+    private IEnumerable<PizzaDto> TodaysPizzas;
+    protected override async Task OnInitializedAsync()
+    {
+        TodaysPizzas = await pizzaService.GetPizzasAsync();
+    }
+}

@@ -15,6 +15,18 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
+    "watch": {
+      "commandName": "Executable",
+      "workingDirectory": "$(ProjectDir)",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "commandLineArgs": "watch run",
+      "executablePath": "dotnet.exe",
+      "applicationUrl": "http://localhost:5242",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
     "BlazingPizza": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
