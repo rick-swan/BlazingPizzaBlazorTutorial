@@ -1,2 +1,6 @@
 November 1st 2024 - (DONE) - https://learn.microsoft.com/en-us/training/modules/use-pages-routing-layouts-control-blazor-navigation/3-exercise-change-navigation-blazor-using-page-directive 
 Next - https://learn.microsoft.com/en-us/training/modules/use-pages-routing-layouts-control-blazor-navigation/4-explore-route-parameters-effect-apps-routing
+Module complete
+
+next
+https://learn.microsoft.com/en-us/training/modules/use-pages-routing-layouts-control-blazor-navigation/1-introduction
